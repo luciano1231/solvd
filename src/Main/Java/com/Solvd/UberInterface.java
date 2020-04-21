@@ -1,6 +1,9 @@
 package Main.Java.com.Solvd;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import Main.Java.com.Solvd.generics.MyGeneric;
+
 import java.util.Scanner;
 
 public class UberInterface {
@@ -25,6 +28,12 @@ public class UberInterface {
 		LOGGER.info(" --- Enter contact number ---");
 		int userContact = myEscaner.nextInt();
 		Client newClient= new Client(userID,userName, userEmail, userContact);
+		
+		
+		//GENERIC object Client
+		MyGeneric <Client> genClient= new MyGeneric<Client>(userID,userName, userEmail, userContact);		
+		genClient.showType();
+		
 		
 		//Create a new Client object with those parameters
 		LOGGER.info(" --- Enter your home location with number ---");
@@ -54,7 +63,7 @@ public class UberInterface {
 		
 		//Seeking for the nearest driver in a list of Drivers		
 		int min = 999;
-		int chossen=0;	 
+		int chosen=0;	 
 		int i=0;
 		for ( i =0; i<=6 ;i++) {
 			
@@ -65,15 +74,15 @@ public class UberInterface {
 			if (Math.abs(drivers[i].calculateDistance(drivers[i].getCurrentDistance(), userLocation)) <= min) {
 				 min =Math.abs(drivers[i].calculateDistance(drivers[i].getCurrentDistance(), userLocation));	
 			
-				 chossen=i;
+				 chosen=i;
 				 }
 				 else {
 					 i++; 
 				 }			
 			}
 		myEscaner.close();
-		LOGGER.info("- The nearest driver is "+drivers[chossen].getName());
-		LOGGER.info("- License Nº: " + drivers[chossen].getLicenceNumber());
+		LOGGER.info("- The nearest driver is "+drivers[chosen].getName());
+		LOGGER.info("- License Nº: " + drivers[chosen].getLicenceNumber());
 		String response = "Yes";
 		LOGGER.info("\n How do you wanna use Credit or Debit? use C or D");
 		response = myEscaner.next();
