@@ -14,7 +14,6 @@ public class Ride {
 			this.st=st;
 		}		
 		private String st;
-		
 	}
 
 	public Ride(int origin, int destination, double amount, double distance, Driver newDriver, Payment newPayment, Client newClient) {
