@@ -2,6 +2,9 @@ package Main.Java.com.Solvd;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import Main.Java.com.Solvd.lambdaTest.CalculateMount;
+import Main.Java.com.Solvd.lambdaTest.NameString;
+
 import java.util.Scanner;
 
 public class Admin extends User{
@@ -18,23 +21,28 @@ public class Admin extends User{
 		}		
 		private String ac;		
 	}
-
+	
 	public Admin(int userID, String userName, String userEmail, int userContact) {
 		super(userID, userName, userEmail, userContact);		
 	}
 	
 	public Admin() {
 	}
-
-	public void enterTheSystem() {
-		LOGGER.fatal( "\n Hello "+this.getName());
-		LOGGER.fatal( "\\n Entering the System please wait");
-	}
+	
+	//Simple Lambda example
 	@Override
 	public void showDetails() {
-		LOGGER.fatal( "\n Hello "+this.getName());
+		NameString nString = (String x)-> ("\n Hello "+this.getName());
+		LOGGER.fatal(nString.nameString(this.getName()));
 		LOGGER.fatal( "\\n Entering the System please wait");
 	}
+	
+	
+	public double calculate(double number) {
+		CalculateMount calc= (double x) -> (x*1.3);		
+		return calc.mount(number);
+			}
+	
 	
 	public void myAcces() {
 		Scanner sc= new Scanner(System.in);
