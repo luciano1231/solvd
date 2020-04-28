@@ -1,4 +1,4 @@
-package Main.Java.com.Solvd.generics;
+package main.java.com.solvd.generics;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -18,7 +18,7 @@ public class MyGeneric<T> {
 	}
 
 	public void showType() {
-		LOGGER.fatal("Test Name for this class "+object.getClass().getName());
+		LOGGER.info("Test Name for this class "+object.getClass().getName());
 	}
 
 }

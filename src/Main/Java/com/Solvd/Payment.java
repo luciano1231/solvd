@@ -1,4 +1,4 @@
-package Main.Java.com.Solvd;
+package main.java.com.solvd;
 
 public abstract class Payment {
 	private String payMethod;

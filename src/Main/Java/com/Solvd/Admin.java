@@ -1,9 +1,9 @@
-package Main.Java.com.Solvd;
+package main.java.com.solvd;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import Main.Java.com.Solvd.lambdaTest.CalculateMount;
-import Main.Java.com.Solvd.lambdaTest.NameString;
+import main.java.com.solvd.lambdaTest.CalculateMount;
+import main.java.com.solvd.lambdaTest.NameString;
 
 import java.util.Scanner;
 

@@ -1,5 +1,5 @@
 
-package Main.Java.com.Solvd;
+package main.java.com.solvd;
 
 public class Ride {
 	private int origin;

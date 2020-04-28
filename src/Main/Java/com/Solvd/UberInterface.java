@@ -1,8 +1,8 @@
-package Main.Java.com.Solvd;
+package main.java.com.solvd;
 import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
-import Main.Java.com.Solvd.generics.MyGeneric;
+import org.apache.logging.log4j.Logger;
+import main.java.com.solvd.generics.MyGeneric;
 
 import java.util.Scanner;
 

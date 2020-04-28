@@ -1,4 +1,4 @@
-package Main.Java.com.Solvd.LinkedList;
+package main.java.com.solvd.linkedList;
 import java.util.*;
 
 import org.apache.logging.log4j.Level;
@@ -20,25 +20,25 @@ public class LinkedListTask {
 		words.add("J");
 		words.add("L");
 		words.add("N");
-		LOGGER.fatal("Lists size is: "+words.size());
+		LOGGER.info("Lists size is: "+words.size());
 		
 		ListIterator<String> iter=words.listIterator();
 		//it.next();
 		
-		LOGGER.fatal("The new list is: ");
+		LOGGER.info("The new list is: ");
 		for (String word : words) {
-			LOGGER.fatal(word);
+			LOGGER.info(word);
 		}		
 		//Adding a element to the middle of the list				
 		
 		try {
 			Scanner myEscaner;
 			int listPosition;
-			LOGGER.fatal("In which position do you want to add an element)");
+			LOGGER.info("In which position do you want to add an element)");
 			myEscaner = new Scanner (System.in);
 			listPosition = myEscaner.nextInt();
 			String letter;
-			LOGGER.fatal("Which letter do you want to add?");
+			LOGGER.info("Which letter do you want to add?");
 			letter = myEscaner.next().toUpperCase();
 			if (listPosition<words.size()) {
 				for (int i=0;i<listPosition;i++) {
@@ -48,12 +48,12 @@ public class LinkedListTask {
 				iter.add(letter);
 				
 			}
-			LOGGER.fatal("The new list is: ");
+			LOGGER.info("The new list is: ");
 			for (String word : words) {
-				LOGGER.fatal(word);
+				LOGGER.info(word);
 			}
 		} catch (InputMismatchException e) {
-			LOGGER.fatal("Sorry bad entry)");
+			LOGGER.info("Sorry bad entry)");
 		}
 	
 		

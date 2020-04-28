@@ -1,4 +1,4 @@
-package Main.Java.com.Solvd;
+package main.java.com.solvd;
 /*
  * 
  * 

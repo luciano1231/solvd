@@ -1,4 +1,4 @@
-package Main.Java.com.Solvd.ReadingFile;
+package main.java.com.solvd.readingFile;
 import java.io.*;
 import java.util.Scanner;
 import org.apache.logging.log4j.LogManager;
@@ -22,8 +22,8 @@ public class RunnerFile {
 			        
 			String  fileAsString = sb.toString();
 			String[] fulltext = fileAsString.split(" ");
-			LOGGER.fatal("This text has "+fulltext.length + " words\n");
-			LOGGER.fatal("What is the word you want tu compare?");
+			LOGGER.info("This text has "+fulltext.length + " words\n");
+			LOGGER.info("What is the word you want tu compare?");
 			Scanner myScaner = new Scanner (System.in);
 			String theWord= myScaner.nextLine();
 			int coincidences=0;
@@ -33,7 +33,7 @@ public class RunnerFile {
 				if (elemento.equals(theWord)) {
 					coincidences=coincidences+1;
 				}			}
-			LOGGER.fatal("The text have the word "+theWord +" "+coincidences+" times");
+			LOGGER.info("The text have the word "+theWord +" "+coincidences+" times");
 			
 			//Writing on the current text File
 			FileWriter fw= new FileWriter("C:\\ESD\\texto.txt",true);
@@ -42,7 +42,7 @@ public class RunnerFile {
 			
 			
 		} catch (FileNotFoundException e) {
-			LOGGER.fatal("Some Error");
+			LOGGER.info("Some Error");
 		}
 		
 

@@ -1,6 +1,6 @@
-package Main.Java.com.Solvd.EnumTask;
+package main.java.com.solvd.enumTask;
 
-import Main.Java.com.Solvd.Admin;
+import main.java.com.solvd.Admin;
 
 public class AccessInterface {
 

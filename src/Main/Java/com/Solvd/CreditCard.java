@@ -1,6 +1,6 @@
-package Main.Java.com.Solvd;
+package main.java.com.solvd;
 
-import Main.Java.com.Solvd.lambdaTest.CalculateMount;
+import main.java.com.solvd.lambdaTest.CalculateMount;
 
 public class CreditCard extends Payment{
 
