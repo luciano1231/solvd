@@ -5,6 +5,8 @@ import java.sql.SQLException;
 
 import main.java.com.solvd.myPool.pool.Validator;
 
+
+
 public final class JDBCConnectionValidator 
     implements Validator < Connection >
 {

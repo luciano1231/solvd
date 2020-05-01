@@ -15,7 +15,7 @@ public final class BoundedBlockingPool < T >
  
  private BlockingQueue < T > objects;
  
- private Validator < T > validator;
+ private main.java.com.solvd.myPool.pool.Validator < T > validator;
  private ObjectFactory < T > objectFactory;
  
  private ExecutorService executor = 
@@ -23,10 +23,7 @@ public final class BoundedBlockingPool < T >
   
  private volatile boolean shutdownCalled;
  
- public BoundedBlockingPool(
-   int size, 
-   Validator < T > validator, 
-   ObjectFactory < T > objectFactory)
+ public BoundedBlockingPool( int size, main.java.com.solvd.myPool.pool.Validator <T> validator, ObjectFactory <T> objectFactory)
  {
   super();
   
@@ -41,7 +38,7 @@ public final class BoundedBlockingPool < T >
   shutdownCalled = false;
  }
  
- public T get(long timeOut, TimeUnit unit)
+public T get(long timeOut, TimeUnit unit)
  {
   if(!shutdownCalled)
   {

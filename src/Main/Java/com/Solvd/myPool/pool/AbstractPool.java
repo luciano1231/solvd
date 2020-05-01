@@ -4,7 +4,7 @@ package main.java.com.solvd.myPool.pool;
  * Represents an abstract pool, that defines the procedure
  * of returning an object to the pool.
  */
-abstract class AbstractPool < T > implements Pool < T >
+public abstract class AbstractPool < T > implements Pool < T >
 {
  /**
   * Returns the object to the pool. 

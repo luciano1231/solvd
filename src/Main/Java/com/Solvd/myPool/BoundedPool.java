@@ -3,6 +3,10 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.concurrent.Semaphore;
 
+import main.java.com.solvd.myPool.pool.AbstractPool;
+import main.java.com.solvd.myPool.pool.ObjectFactory;
+
+
 public class BoundedPool < T > 
  extends AbstractPool < T >
 {
@@ -19,7 +23,7 @@ public class BoundedPool < T >
  
  public BoundedPool(
   int size, 
-  Validator < T > validator, 
+  main.java.com.solvd.myPool.pool.Validator < T > validator, 
   ObjectFactory < T > objectFactory)
  {
   super();

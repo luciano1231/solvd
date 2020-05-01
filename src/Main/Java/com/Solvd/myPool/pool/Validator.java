@@ -5,7 +5,7 @@ package main.java.com.solvd.myPool.pool;
   * validate an object of the pool
   * and to subsequently perform cleanup activities.
   */
- public static interface Validator < T >
+ public interface Validator <T>
  {
   /**
    * Checks whether the object is valid.

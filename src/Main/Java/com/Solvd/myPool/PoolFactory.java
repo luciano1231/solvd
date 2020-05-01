@@ -1,5 +1,8 @@
 package main.java.com.solvd.myPool;
 
+import main.java.com.solvd.myPool.pool.BoundedBlockingPool;
+import main.java.com.solvd.myPool.pool.ObjectFactory;
+import main.java.com.solvd.myPool.pool.Pool;
 import main.java.com.solvd.myPool.pool.Validator;
 
 /**
@@ -46,13 +49,10 @@ public final class PoolFactory
  public static < T > Pool < T > 
   newBoundedBlockingPool(
       int size, 
-      ObjectFactory < T > factory, 
-      Validator < T > validator)
+      ObjectFactory <T> factory, 
+      Validator <T> validator)
  {
-  return new BoundedBlockingPool < T > (
-                                    size, 
-                                    validator,
-                                    factory);
+  return new BoundedBlockingPool<T> (size, validator,factory);
  }
  
  /**
@@ -69,8 +69,7 @@ public final class PoolFactory
   * @return an object pool bounded by <tt> size </tt>
   */
  
- public static < T > Pool < T > newBoundedNonBlockingPool(
-  int size, 
+ public static < T > Pool < T > newBoundedNonBlockingPool( int size, 
   ObjectFactory < T > factory, 
   Validator < T > validator)
  {
