@@ -1,11 +1,14 @@
 package main.java.com.solvd;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.Scanner;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 public class Ride {
-	private final static Logger LOGGER = LogManager.getLogger(Ride.class);
+	private final static java.util.logging.Logger LOGGER = LogManager.getLogger(Ride.class);
 	private int origin;
 	private int destination;
 	private double distance;
@@ -18,6 +21,7 @@ public class Ride {
 		this.destination = destination;
 		this.amount = amount;
 		this.distance = distance;
+		
 
 	}
 
@@ -56,8 +60,16 @@ public class Ride {
 	public void setDistance(double distance) {
 		this.distance = distance;
 	}
-
+	//Create a new ride with a new client, also looks for the nearest driver
 	public static void newRide() {
+		
+		//Showing actual date
+		Calendar calendar = Calendar.getInstance();
+		calendar.add(Calendar.DAY_OF_MONTH, 10);
+		Date date = calendar.getTime();
+		String formattedDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(date);
+		LOGGER.info("Date: " +formattedDate);
+		
 		
 		// Creating a new client
 		Client aClient=Client.newClient();
@@ -67,6 +79,7 @@ public class Ride {
 		// MyGeneric<Client>(newClient.getID(),newClient.getName(),
 		// newClient.getEmail(),newClient.getContact());
 		// genClient.showType();
+		
 		Scanner myScanner = new Scanner(System.in);
 		
 		// Creating a list of Drivers
@@ -77,28 +90,30 @@ public class Ride {
 		int homeLocation=aClient.getHomeLocation();
 		driver.nearDriver(drivers, homeLocation);
 		
-		LOGGER.fatal(" --- Enter your destination with numbers ---");
+		LOGGER.info(" --- Enter your destination with numbers ---");
 		int userDestination = myScanner.nextInt();;
 		myScanner.nextLine();
 		
-		LOGGER.fatal("- The mount is: $" + userDestination);
+		LOGGER.info("- The mount is: $" + userDestination);
 		
 		int finalAmount = Math.abs(userDestination - homeLocation);
 
-		LOGGER.fatal("- The mount is: $" + finalAmount);
+		LOGGER.info("- The mount is: $" + finalAmount);
 		
 		String response = "Yes";
-		LOGGER.fatal("\n How do you wanna use Credit or Debit? use C or D\n");
+		LOGGER.info("\n How do you wanna use Credit or Debit? use C or D\n");
 		response = myScanner.next();
 		myScanner.next();
 
 		if (response.equals("D")) {
 			Debit newDebit = new Debit("Debit", finalAmount);
-			LOGGER.fatal("The amount is: " + (newDebit.calculate(finalAmount)));
+			LOGGER.info("The amount is: " + (newDebit.calculate(finalAmount)));
 		} else {
 			CreditCard newCredit = new CreditCard("Credit", finalAmount);
-			LOGGER.fatal("The Mount is: " + newCredit.calculate(finalAmount));
+			LOGGER.info("The Mount is: " + newCredit.calculate(finalAmount));
 		}
+		
 	}
+	
 
 }

@@ -37,7 +37,7 @@ public class Driver extends User{
 
 	@Override
 	public void showDetails() {
-		LOGGER.fatal("- The Driver is:" + this.getName());
+		LOGGER.info("- The Driver is:" + this.getName());
 	}
 	public int calculateDistance (int currentDistance, int a) {
 		return a - currentDistance;
@@ -76,8 +76,8 @@ public class Driver extends User{
 				i++; 
 			}			
 		}		
-		LOGGER.fatal("- The nearest driver is "+drivers[chosen].getName());
-		LOGGER.fatal("- License Nº: " + drivers[chosen].getLicenceNumber());
+		LOGGER.info("- The nearest driver is "+drivers[chosen].getName());
+		LOGGER.info("- License Nº: " + drivers[chosen].getLicenceNumber());
 		return drivers[chosen];
 	}
 
