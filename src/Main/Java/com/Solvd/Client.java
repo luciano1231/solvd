@@ -6,7 +6,7 @@ import org.apache.logging.log4j.Logger;
 
 public class Client extends User{
 	private final static Logger LOGGER = LogManager.getLogger(Client.class);
-	public Client(int userID, String userName, String userEmail, int userContact, int homeLocation) {
+	public Client(int userID, String userName, String userEmail, int userContact) {
 		super(userID, userName, userEmail, userContact);		
 	}	 
 	
@@ -19,7 +19,7 @@ public class Client extends User{
 	public void showDetails() {
 		System.out.println("- The Driver is:" + this.getName());
 	}
-	public Client newClient() {
+	public static Client newClient() {
 		Scanner myEscaner = new Scanner (System.in);
 		LOGGER.info(" ---       UBER       ---");
 		LOGGER.fatal(" --- Please Register ---");
@@ -35,15 +35,20 @@ public class Client extends User{
 			
 		LOGGER.fatal(" --- Enter contact number ---");
 		int userContact = myEscaner.nextInt();
-		LOGGER.fatal(" --- Enter your home location with number ---");
-		int userLocation = myEscaner.nextInt();
-		Client newClient= new Client(userID,userName, userEmail, userContact,userLocation);
-		myEscaner.close();
+		
+		Client newClient= new Client(userID,userName, userEmail, userContact);
+		//myEscaner.close();
 		return newClient;
 		
 	}
-	public int getUserLocation() {
-		return this.getUserLocation();
+	public int getHomeLocation() {
+		Scanner myEscaner = new Scanner (System.in);
+
+		LOGGER.fatal(" --- Enter your home location with number ---");
+		int homeLocation = myEscaner.nextInt();
+		return homeLocation;
 	}
+	
+	
 		
 }

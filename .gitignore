@@ -1,2 +1,6 @@
+.settings/
+.target/
+.project
+.classpath
+bin/
 
-bin/Main/Java/com/Solvd/
