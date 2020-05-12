@@ -1,4 +1,4 @@
-package main.java.com.solvd;
+package carServices;
 
 import java.util.Scanner;
 import org.apache.logging.log4j.LogManager;

@@ -1,9 +1,6 @@
-package main.java.com.solvd;
+package carServices;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
-import main.java.com.solvd.lambdaTest.CalculateMount;
-import main.java.com.solvd.lambdaTest.NameString;
 
 import java.util.Scanner;
 

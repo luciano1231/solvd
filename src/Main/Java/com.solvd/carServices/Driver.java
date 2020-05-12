@@ -1,4 +1,4 @@
-package main.java.com.solvd;
+package carServices;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -77,7 +77,7 @@ public class Driver extends User{
 			}			
 		}		
 		LOGGER.info("- The nearest driver is "+drivers[chosen].getName());
-		LOGGER.info("- License Nº: " + drivers[chosen].getLicenceNumber());
+		LOGGER.info("- License Nï¿½: " + drivers[chosen].getLicenceNumber());
 		return drivers[chosen];
 	}
 
