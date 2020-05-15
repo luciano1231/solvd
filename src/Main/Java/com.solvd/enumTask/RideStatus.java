@@ -1,4 +1,4 @@
-package main.java.com.solvd.enumTask;
+package enumTask;
 
 public enum RideStatus {
 	

@@ -48,4 +48,4 @@ JOIN mydb.countries co
 ON c.id = co.cities_id
 HAVING (c.name) = "tokelau";
 
-
+SHOW VARIABLES WHERE VARIABLE_NAME in("hostname", "port")

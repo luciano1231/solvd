@@ -1,4 +1,4 @@
-package main.java.com.solvd.poolConnection;
+package poolConnection;
 
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;

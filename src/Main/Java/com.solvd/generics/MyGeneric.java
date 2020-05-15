@@ -1,4 +1,4 @@
-package main.java.com.solvd.generics;
+package generics;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

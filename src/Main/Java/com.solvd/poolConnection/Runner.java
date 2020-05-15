@@ -1,4 +1,4 @@
-package main.java.com.solvd.poolConnection;
+package poolConnection;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

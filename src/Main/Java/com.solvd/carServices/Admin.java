@@ -1,8 +1,11 @@
 package carServices;
+import java.util.Scanner;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.util.Scanner;
+import lambda.CalculateMount;
+import lambda.NameString;
 
 public class Admin extends User{
 	private final static Logger LOGGER = LogManager.getLogger(Admin.class);

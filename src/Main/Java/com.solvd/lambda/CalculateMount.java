@@ -1,4 +1,4 @@
-package main.java.com.solvd.lambdaTest;
+package lambda;
 
 
 public interface CalculateMount {

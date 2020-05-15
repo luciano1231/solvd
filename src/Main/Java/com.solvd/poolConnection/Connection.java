@@ -1,4 +1,4 @@
-package main.java.com.solvd.poolConnection;
+package poolConnection;
 
 public interface Connection {
 

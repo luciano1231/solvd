@@ -1,6 +1,6 @@
-package main.java.com.solvd.enumTask;
+package enumTask;
 
-import main.java.com.solvd.Admin;
+import carServices.Admin;
 
 public class AccessInterface {
 
