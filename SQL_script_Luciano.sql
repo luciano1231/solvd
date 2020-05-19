@@ -48,4 +48,22 @@ JOIN mydb.countries co
 ON c.id = co.cities_id
 HAVING (c.name) = "tokelau";
 
-SHOW VARIABLES WHERE VARIABLE_NAME in("hostname", "port")
+SHOW VARIABLES WHERE VARIABLE_NAME in("hostname", "port");
+
+SELECT * 
+from mydb.customers cu
+INNER JOIN mydb.phones ph ON cu.id = ph.customers_id
+INNER JOIN mydb.request rq ON cu.id = rq.customers_id
+INNER JOIN mydb.employees em ON em.id = rq.employees_id
+INNER JOIN mydb.offices off ON em.id = rq.id
+INNER JOIN mydb.payments pay ON pay.id = rq.payments_id
+INNER JOIN mydb.products pro ON pro.id = rq.products_id
+INNER JOIN mydb.coverages cvr ON cvr.id = pro.coverages_id
+INNER JOIN mydb.houses ho ON ho.id = pro.houses_id
+ORDER BY  cu.name;
+
+
+
+
+
+
