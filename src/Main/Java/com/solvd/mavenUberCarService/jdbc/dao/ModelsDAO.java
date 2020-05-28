@@ -8,9 +8,9 @@ import java.util.List;
 
 import jdbc.connection.Conection;
 import jdbc.dto.ModelsDTO;
-import jdbc.interfaces.MyInterface;
+import jdbc.interfaces.JDBCInterface;
 
-public class ModelsDAO implements MyInterface<ModelsDTO> {
+public class ModelsDAO implements JDBCInterface<ModelsDTO> {
 
 	// CRUDs
 	private static final String SQL_INSERT = "INSERT INTO models (id, description) VALUES(?, ?, ?)";

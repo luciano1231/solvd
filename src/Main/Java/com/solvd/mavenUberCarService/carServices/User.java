@@ -1,5 +1,7 @@
 package carServices;
-
+import javax.xml.bind.annotation.XmlType;
+	
+@XmlType(propOrder = {"userID", "userName", "userEmail", "userContact"})
 public abstract class User {
 	private int userID;
 	private String userName;

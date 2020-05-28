@@ -3,6 +3,10 @@ package carServices;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.util.LinkedList;
+import javax.xml.bind.annotation.XmlType;
+
+@XmlType(propOrder = { "userID", "userName", "userEmail", "userContact", "licenceNumber" })
 public class Driver extends User {
 
 	private final static Logger LOGGER = LogManager.getLogger(Driver.class);
@@ -18,7 +22,6 @@ public class Driver extends User {
 	}
 
 	public Driver() {
-		// TODO Auto-generated constructor stub
 	}
 
 	private void setCurrentDistance(int currentDistance) {
@@ -46,19 +49,28 @@ public class Driver extends User {
 		return a - currentDistance;
 	}
 
-	public Driver[] driverList() {
-		// Creating a list with Drivers
-		Driver[] drivers = new Driver[10];
-		drivers[0] = new Driver(0002, "Jason King", "jsonking@outlook.com", 3352211, 8528524, 50);
-		drivers[1] = new Driver(0003, "Snow Kevin", "jsonking@outlook.com", 2113352, 5248528, 100);
-		drivers[2] = new Driver(0004, "George Lucas", "jsonking@outlook.com", 3352211, 5288524, 150);
-		drivers[3] = new Driver(0005, "Terry Bogard", "jsonking@outlook.com", 5223311, 1028524, 250);
-		drivers[4] = new Driver(0006, "Iory Yagami", "jsonking@outlook.com", 2233511, 5111524, 80);
-		drivers[5] = new Driver(0007, "Johnny Cage", "jsonking@outlook.com", 1152211, 0000024, 30);
-		drivers[6] = new Driver(0000, "Chris Redfield", "jsonking@outlook.com", 999211, 9858824, 10);
-		drivers[7] = new Driver(0001, "Clark Kent", "jsonking@outlook.com", 4442211, 2232214, 150);
+	@SuppressWarnings("null")
+	public static LinkedList<Driver> driverList() {
+
+		LinkedList<Driver> drivers = new LinkedList<Driver>();
+
+		LOGGER.fatal("Creating drivers");
+
+		drivers.add(new Driver(0002, "Jason King", "jsonking@outlook.com", 3352211, 8528524, 50));
+		drivers.add(new Driver(0002, "Jason King", "jsonking@outlook.com", 3352211, 8528524, 50));
+		drivers.add(new Driver(0002, "Jason King", "jsonking@outlook.com", 3352211, 8528524, 50));
+		drivers.add(new Driver(0003, "Snow Kevin", "jsonking@outlook.com", 2113352, 5248528, 100));
+		drivers.add(new Driver(0004, "George Lucas", "jsonking@outlook.com", 3352211, 5288524, 150));
+		drivers.add(new Driver(0005, "Terry Bogard", "jsonking@outlook.com", 5223311, 1028524, 250));
+		drivers.add(new Driver(0006, "Iory Yagami", "jsonking@outlook.com", 2233511, 5111524, 80));
+		drivers.add(new Driver(0007, "Johnny Cage", "jsonking@outlook.com", 1152211, 0000024, 30));
+		drivers.add(new Driver(0000, "Chris Redfield", "jsonking@outlook.com", 999211, 9858824, 10));
+		drivers.add(new Driver(0001, "Clark Kent", "jsonking@outlook.com", 4442211, 2232214, 150));
+
+		LOGGER.fatal("Lots of Drivers added");
 
 		return drivers;
+
 	}
 
 	public Driver nearDriver(Driver[] drivers, int userLocation) {

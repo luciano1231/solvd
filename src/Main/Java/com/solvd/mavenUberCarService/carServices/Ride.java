@@ -3,6 +3,7 @@ package carServices;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.LinkedList;
 import java.util.Scanner;
 
 import org.apache.logging.log4j.LogManager;
@@ -83,7 +84,7 @@ public class Ride {
 
 		// Creating a list of Drivers
 		Driver driver = new Driver();
-		Driver[] drivers = driver.driverList();
+		LinkedList<Driver> drivers = driver.driverList();
 
 		// Looking for the nearest Driver
 		int homeLocation = aClient.getHomeLocation();

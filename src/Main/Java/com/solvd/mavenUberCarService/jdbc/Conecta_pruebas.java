@@ -19,19 +19,20 @@ public class Conecta_pruebas {
 	public static void main(String[] args) {
 		
 		try {
-			//Creamos la conexion
-			LOGGER.debug("Intenta");
+			//Creating connection
+			LOGGER.debug("Try");
 			LOGGER.info("Try connection");
-			System.out.println("Intenta");
+			System.out.println("Try");
 			Connection miConexion=DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC","lucianoArg","1231");
-			System.out.println("conecta");
-			//Creamos objeto Statement
+			System.out.println("Connected");
+			
+			//Statement
 			Statement miStatement= miConexion.createStatement();
 			
-			//Ejecutar la instruccion SQL
-			//ResultSet  tiene forma de tabla
+			//SQL Commands
+			//ResultSet  for table like model
 			ResultSet miResulset= miStatement.executeQuery("SELECT * FROM mydb.models");
-			//recorrer el ResultSet
+
 			while (miResulset.next()) {
 				System.out.println(miResulset.getString("id")+" "+ miResulset.getString("description"));
 			}
