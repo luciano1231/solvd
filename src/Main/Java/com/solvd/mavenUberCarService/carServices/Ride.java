@@ -1,4 +1,4 @@
-package carServices;
+package com.solvd.mavenUberCarService.carServices;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -88,7 +88,7 @@ public class Ride {
 
 		// Looking for the nearest Driver
 		int homeLocation = aClient.getHomeLocation();
-		driver.nearDriver(drivers, homeLocation);
+		//driver.nearDriver(drivers, homeLocation);
 
 		LOGGER.info(" --- Enter your destination with numbers ---");
 		int userDestination = myScanner.nextInt();

@@ -1,6 +1,6 @@
-package enumTask;
+package com.solvd.mavenUberCarService.enumTask;
 
-import carServices.Admin;
+import com.solvd.mavenUberCarService.carServices.Admin;
 
 public class AccessInterface {
 

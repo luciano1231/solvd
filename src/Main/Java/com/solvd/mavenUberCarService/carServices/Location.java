@@ -1,4 +1,4 @@
-package carServices;
+package com.solvd.mavenUberCarService.carServices;
 /*
  * 
  * 

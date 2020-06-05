@@ -1,4 +1,4 @@
-package carServices;
+package com.solvd.mavenUberCarService.carServices;
 import javax.xml.bind.annotation.XmlType;
 	
 @XmlType(propOrder = {"userID", "userName", "userEmail", "userContact"})

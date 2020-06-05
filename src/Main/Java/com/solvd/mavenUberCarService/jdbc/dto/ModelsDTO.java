@@ -1,4 +1,4 @@
-package jdbc.dto;
+package com.solvd.mavenUberCarService.jdbc.dto;
 
 public class ModelsDTO {
 	private String id;

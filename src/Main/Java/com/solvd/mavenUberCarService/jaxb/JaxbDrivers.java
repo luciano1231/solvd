@@ -1,10 +1,10 @@
-package jaxb;
+package com.solvd.mavenUberCarService.jaxb;
 
 import java.io.File;
 import java.util.LinkedList;
 
-import carServices.Driver;
-import carServices.DriversList;
+import com.solvd.mavenUberCarService.carServices.Driver;
+import com.solvd.mavenUberCarService.carServices.DriversList;
 import javax.xml.bind.*;
 
 import org.apache.logging.log4j.LogManager;

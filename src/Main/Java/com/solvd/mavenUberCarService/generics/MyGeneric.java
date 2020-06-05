@@ -1,4 +1,4 @@
-package generics;
+package com.solvd.mavenUberCarService.generics;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

@@ -1,4 +1,4 @@
-package jdbc.dao;
+package com.solvd.mavenUberCarService.jdbc.dao;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -6,8 +6,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import jdbc.connection.Conection;
-import jdbc.dto.ModelsDTO;
+import com.solvd.mavenUberCarService.jdbc.connection.Conection;
+import com.solvd.mavenUberCarService.jdbc.dto.ModelsDTO;
 import jdbc.interfaces.JDBCInterface;
 
 public class ModelsDAO implements JDBCInterface<ModelsDTO> {

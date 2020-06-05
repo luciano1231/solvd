@@ -1,4 +1,4 @@
-package jdbc.connection;
+package com.solvd.mavenUberCarService.jdbc.connection;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -8,7 +8,7 @@ import java.sql.Statement;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import carServices.Admin;
+import com.solvd.mavenUberCarService.carServices.Admin;
 
 public class Conection {
 	

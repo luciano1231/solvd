@@ -1,4 +1,4 @@
-package carServices;
+package com.solvd.mavenUberCarService.carServices;
 
 public abstract class Payment {
 	private String payMethod;

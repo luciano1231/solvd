@@ -1,4 +1,4 @@
-package staxparsing;
+package com.solvd.mavenUberCarService.staxparsing;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -14,7 +14,7 @@ import javax.xml.stream.events.StartElement;
 import javax.xml.stream.events.XMLEvent;
 
 public class StaxHandler {
-
+/*
 	public StringBuffer processXMLFile(File xMLFile) throws FileNotFoundException, XMLStreamException, FactoryConfigurationError {
 		XMLEvent xMLEvent = null;
 		Characters character = null;
@@ -42,5 +42,6 @@ public class StaxHandler {
 		
 		return null;
 	}
+	*/
 
 }

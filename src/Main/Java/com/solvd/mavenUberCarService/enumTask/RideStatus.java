@@ -1,4 +1,4 @@
-package enumTask;
+package com.solvd.mavenUberCarService.enumTask;
 
 public enum RideStatus {
 	

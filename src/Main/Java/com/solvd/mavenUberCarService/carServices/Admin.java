@@ -1,4 +1,4 @@
-package carServices;
+package com.solvd.mavenUberCarService.carServices;
 import java.util.Scanner;
 
 import org.apache.logging.log4j.LogManager;

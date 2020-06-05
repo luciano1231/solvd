@@ -1,13 +1,13 @@
-package jdbc.controller;
+package com.solvd.mavenUberCarService.jdbc.controller;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import carServices.Admin;
-import jdbc.dao.ModelsDAO;
-import jdbc.dto.ModelsDTO;
+import com.solvd.mavenUberCarService.carServices.Admin;
+import com.solvd.mavenUberCarService.jdbc.dao.ModelsDAO;
+import com.solvd.mavenUberCarService.jdbc.dto.ModelsDTO;
 
-public class Prueba {
+public class Test {
 	private final static Logger LOGGER = LogManager.getLogger(Admin.class);
 
 

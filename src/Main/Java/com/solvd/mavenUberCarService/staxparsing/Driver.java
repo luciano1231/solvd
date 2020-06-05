@@ -1,4 +1,4 @@
-package staxparsing;
+package com.solvd.mavenUberCarService.staxparsing;
 
 public class Driver {
 

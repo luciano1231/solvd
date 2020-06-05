@@ -1,4 +1,4 @@
-package jdbc;
+package com.solvd.mavenUberCarService.jdbc;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -7,7 +7,7 @@ import java.sql.Statement;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import carServices.Admin;
+import com.solvd.mavenUberCarService.carServices.Admin;
 
 public class Conecta_pruebas {
 	private final static Logger LOGGER = LogManager.getLogger(Admin.class);
