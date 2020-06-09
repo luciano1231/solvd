@@ -6,7 +6,7 @@ import static com.solvd.mavenUberCarService.jsonparsing.Json.parse;
 
 public class JsonRunner {
     public static void main(String[] arg) {
-        String jsonSource= "{\"title\": \"Coder from Scratch\"}";
+        String jsonSource= "{\"title\": \"code\"}";
         try {
             JsonNode node = parse(jsonSource);
             System.out.println(node.get("title").asText());
