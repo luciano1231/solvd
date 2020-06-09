@@ -12,7 +12,7 @@ public class Location {
 	private int streetNumber;
 
 	public Location(String city, String street, int locationID, int streetNumber) {
-		super();
+
 		this.city = city;
 		this.street = street;
 		this.locationID = locationID;

@@ -12,14 +12,12 @@ import org.apache.logging.log4j.Logger;
 import org.eclipse.persistence.jaxb.MarshallerProperties;
 
 
-
 public class JaxbDrivers {
 	private final static Logger LOGGER = LogManager.getLogger(JaxbDrivers.class);
 
 	public JaxbDrivers() {		
 	}
-	
-	
+
 	public static void createXML() {
 		try {
 				
@@ -48,7 +46,6 @@ public class JaxbDrivers {
 			// TODO Auto-generated catch block
 			ex.printStackTrace();
 		}
-		
 	}
 	
 	public static void readXML() {
@@ -57,27 +54,20 @@ public class JaxbDrivers {
 			JAXBContext ctx = JAXBContext.newInstance(DriversList.class);
 			Unmarshaller ums = ctx.createUnmarshaller();
 			
-			LOGGER.fatal("unmarshaleado1");
+			LOGGER.fatal("unmarshal");
 			
 			DriversList driversList = (DriversList)ums.unmarshal(new File("C:\\logs\\drivers2.xml"));
 			
-			LOGGER.fatal("unmarshaleado");
-			//My logic error
+			LOGGER.fatal("unmarshal");//My logic error
 			
 //			for (Driver driver: driversList.getDrivers()) {
 //				System.out.println(driver.getName() +" "+driver.getLicenceNumber()+" "+driver.getContact());
 //			}
 			
-			
-			
 		}catch(JAXBException ex){
 			ex.printStackTrace();
-			
 		}
-		
 	}
-	
-	
 	
 	public static void main(String[] args) {
 		//createXML();
